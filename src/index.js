@@ -7,7 +7,8 @@ module.exports = function check(str, bracketsConfig) {
       for (let i = 0, str_arr_len = str_arr.length; i < str_arr_len; i++){
         if (str_arr[i] === bracketsConfig[b][0] && str_arr[i+1] === bracketsConfig[b][1]){
           str_arr.splice(i,2);
-          i = 0;
+          i = -1; 
+          b = 0;
         }
       }
     }
